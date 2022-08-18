@@ -1,10 +1,11 @@
 <script>
     // get data from url 
     let url ="https://pollysnips.s3.amazonaws.com/bostonEmployeeSalaries.json"
+    // gett the data and display it in the browser
     fetch(url).then((response) => response.json())
         .then(json => {
             data = json
-            console.log(data)
+            document.write(JSON.stringify(data));
         })
         .catch(error => {
             throw(error);
